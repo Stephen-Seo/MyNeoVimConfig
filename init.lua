@@ -65,7 +65,7 @@ vim.api.nvim_command('match CustomRedHighlight /TODO/')
 
 vim.cmd(
 [[
-" CJK imput
+" CJK input
 function CJKInput()
     let l:cmd = 'zenity --entry --text=CJK-Input 2>/dev/null'
     let l:output = system(l:cmd)
