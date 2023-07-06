@@ -16,3 +16,9 @@ files.
 
 `loadlsp#loadlspall()` is a custom function that can be found
 [here](https://git.seodisparate.com/stephenseo/MyNeoVimConfig/src/branch/main/pack/packages/start/loadlsp/autoload/loadlsp.vim).
+
+## Other Notes
+
+If you want to improve/support/file-an-issue about this config, send it to:
+
+stephen AT seodisparate DOT com
