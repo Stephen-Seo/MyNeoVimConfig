@@ -4,7 +4,9 @@ This is just a dump of my NVim config.
 
 ## Using This Config
 
-Clone the repo into `$HOME/.config/nvim`.
+1. Clone the repo into `$HOME/.config/nvim`.  
+2. Invoke `git sumbodule update --init --recursive --depth=1` in
+   `$HOME/.config/nvim`.
 
 ## Enabling LSP
 
