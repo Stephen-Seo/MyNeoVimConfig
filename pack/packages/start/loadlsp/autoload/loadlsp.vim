@@ -90,7 +90,11 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.clangd.setup {
     cmd = {"clangd", "--completion-style=detailed"},
-    capabilities = capabilities
+    capabilities = capabilities,
+    on_attach = function (client, bufnr)
+        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+        client.server_capabilities.semanticTokensProvider = nil
+    end
 }
 
 local rust_features = {}
@@ -107,13 +111,25 @@ lspconfig.rust_analyzer.setup {
                 ["features"] = rust_features,
             },
         },
-    }
+    },
+    on_attach = function (client, bufnr)
+        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+        client.server_capabilities.semanticTokensProvider = nil
+    end
 }
 lspconfig.gdscript.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    on_attach = function (client, bufnr)
+        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+        client.server_capabilities.semanticTokensProvider = nil
+    end
 }
 lspconfig.jedi_language_server.setup{
-    capabilities = capabilities
+    capabilities = capabilities,
+    on_attach = function (client, bufnr)
+        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+        client.server_capabilities.semanticTokensProvider = nil
+    end
 }
 
 -- apply available fix
