@@ -8,6 +8,11 @@ This is just a dump of my NVim config.
 2. Invoke `git submodule update --init --recursive --depth=1` in
    `$HOME/.config/nvim`.
 
+## Updating This Config
+
+1. `git pull` or `git fetch` and merge.
+2. `git submodule update --init --recursive`
+
 ## Enabling LSP
 
 In NeoVim, invoke `:call loadlsp#loadlspall()`, then reload the current open
