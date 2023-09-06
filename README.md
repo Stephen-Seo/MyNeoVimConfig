@@ -12,6 +12,7 @@ This is just a dump of my NVim config.
 
 1. `git pull` or `git fetch` and merge.
 2. `git submodule update --init --recursive`
+3. Open vim and invoke `:TSUpdate` to update tree-sitter.
 
 ## Enabling LSP
 
