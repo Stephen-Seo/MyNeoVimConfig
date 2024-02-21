@@ -62,7 +62,7 @@ vim.api.nvim_command('autocmd InsertEnter * match ForbiddenWhitespace /\\t\\|\\s
 vim.api.nvim_command('hi! CustomRedHighlight ctermbg=red guibg=red')
 vim.api.nvim_command('match CustomRedHighlight /TODO/')
 
-
+-- On <leader>i, open zenity textbox for gui text input
 vim.cmd(
 [[
 " CJK input
@@ -75,11 +75,13 @@ endfunction
 nmap <silent> <leader>i :call CJKInput()<CR>
 ]])
 
---vim.cmd('nmap q :echo "I accidentally hit q, I don\'t use macros"<CR>')
---vim.cmd('vmap q <ESC>:echo "I accidentally hit q, I don\'t use macros"<CR>')
+-- Disable q
+vim.cmd('nmap q :echo "I accidentally hit q, I don\'t use macros"<CR>')
+vim.cmd('vmap q <ESC>:echo "I accidentally hit q, I don\'t use macros"<CR>')
 
-vim.cmd('nmap q :lua vim.g.quickcomment_togglecommentline()<CR>')
-vim.cmd('vmap q :luado vim.g.quickcomment_togglecommentline(linenr)<CR>')
+-- Set <leader>q to comment selected line(s)
+vim.cmd('nmap <leader>q :lua vim.g.quickcomment_togglecommentline()<CR>')
+vim.cmd('vmap <leader>q :luado vim.g.quickcomment_togglecommentline(linenr)<CR>')
 
 vim.g.quickcomment_whitespaceprefix = 1
 
@@ -95,7 +97,14 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
+-- Setup folding based on treesitter
 vim.g.foldmethod_treesitter_fn = function ()
     vim.opt.foldmethod = "expr"
     vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 end
+
+-- <leader>f to treesitter-fold
+vim.cmd('nmap <leader>f :lua vim.g.foldmethod_treesitter_fn()<CR>')
+
+-- <leader>l to load lsp
+vim.cmd('nmap <silent> <leader>l :call loadlsp#loadlspall()<CR> :e<CR> :echo "Loaded lsp plugins"<CR>')

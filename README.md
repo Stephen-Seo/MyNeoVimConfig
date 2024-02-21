@@ -16,9 +16,11 @@ This is just a dump of my NVim config.
 
 ## Enabling LSP
 
-In NeoVim, invoke `:call loadlsp#loadlspall()`, then reload the current open
-files with `:e` and LSP functionality will be enabled for the currently open
-files.
+In NeoVim, ~~invoke `:call loadlsp#loadlspall()`, then reload the current open
+files with `:e`~~ use the "<leader>l" (backslash and l) shortcut and LSP
+functionality will be enabled for the currently open file. If you have more
+than one buffer open, you may have to reopen them (with :e) for lsp plugins to
+take effect.
 
 `loadlsp#loadlspall()` is a custom function that can be found
 [here](https://git.seodisparate.com/stephenseo/MyNeoVimConfig/src/branch/main/pack/packages/start/loadlsp/autoload/loadlsp.vim).

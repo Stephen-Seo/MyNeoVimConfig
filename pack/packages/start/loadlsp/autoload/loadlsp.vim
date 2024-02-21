@@ -133,10 +133,11 @@ lspconfig.jedi_language_server.setup{
 }
 
 -- apply available fix
-vim.api.nvim_set_keymap("n", "<C-F>", "<cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-A>", "<cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true})
 -- goto next warning/error
 --vim.api.nvim_set_keymap("n", "<C-N>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-N>", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-P>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", {noremap = true})
 
 EOF
 
