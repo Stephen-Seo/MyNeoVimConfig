@@ -22,7 +22,7 @@ use of this shortcut, you can disable it in the `init.lua` config file.
 ## Enabling LSP
 
 In NeoVim, ~~invoke `:call loadlsp#loadlspall()`, then reload the current open
-files with `:e`~~ use the "<leader>l" (backslash and l) shortcut and LSP
+files with `:e`~~ use the `<leader>l` (backslash and l) shortcut and LSP
 functionality will be enabled for the currently open file. If you have more
 than one buffer open, you may have to reopen them (with :e) for lsp plugins to
 take effect.
