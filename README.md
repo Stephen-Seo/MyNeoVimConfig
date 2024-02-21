@@ -2,6 +2,11 @@
 
 This is just a dump of my NVim config.
 
+## Things to note before using
+
+Normal mode "q" (macro shortcut) is disabled by default. If you want to enable
+use of this shortcut, you can disable it in the `init.lua` config file.
+
 ## Installing This Config
 
 1. Clone the repo into `$HOME/.config/nvim`.  
