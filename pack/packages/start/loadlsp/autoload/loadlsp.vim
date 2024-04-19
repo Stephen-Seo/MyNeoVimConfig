@@ -140,6 +140,9 @@ vim.api.nvim_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.declaration()<CR
 vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true})
 -- get lsp references
 vim.api.nvim_set_keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.references()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>rn", "<cmd>cn<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>rp", "<cmd>cp<CR>", {noremap = true})
 -- goto next warning/error
 --vim.api.nvim_set_keymap("n", "<C-N>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-N>", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true})
