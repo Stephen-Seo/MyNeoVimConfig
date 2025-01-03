@@ -37,3 +37,6 @@
 [submodule "lsppack/pack/lsppackages/start/vim-vsnip"]
 	path = lsppack/pack/lsppackages/start/vim-vsnip
 	url = https://github.com/hrsh7th/vim-vsnip.git
+[submodule "pack/packages/start/everforest-nvim"]
+	path = pack/packages/start/everforest-nvim
+	url = https://github.com/neanias/everforest-nvim

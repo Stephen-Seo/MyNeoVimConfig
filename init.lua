@@ -30,8 +30,9 @@ vim.o.termguicolors = true
 -- color scheme
 --vim.g.colors_name = "jellybeans"
 --vim.api.nvim_command("color jellybeans")
-vim.api.nvim_command("let g:dracula_colorterm = 0")
-vim.api.nvim_command("color dracula")
+--vim.api.nvim_command("let g:dracula_colorterm = 0")
+--vim.api.nvim_command("color dracula")
+vim.api.nvim_command("color everforest")
 vim.o.hlsearch = true
 --vim.g.syntax = "on" -- unknown how to do this in lua, but is default on
 vim.o.expandtab = true
