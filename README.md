@@ -10,7 +10,7 @@ use of this shortcut, you can disable it in the `init.lua` config file.
 ## Installing This Config
 
 1. Clone the repo into `$HOME/.config/nvim`.  
-2. Invoke `git submodule update --init --recursive --depth=1` in
+2. Invoke `git submodule update --init --recursive` in
    `$HOME/.config/nvim`.
 
 ## Updating This Config
