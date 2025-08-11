@@ -32,6 +32,9 @@ vim.o.termguicolors = true
 --vim.api.nvim_command("color jellybeans")
 --vim.api.nvim_command("let g:dracula_colorterm = 0")
 --vim.api.nvim_command("color dracula")
+require("everforest").setup({
+    transparent_background_level = 1,
+})
 vim.api.nvim_command("color everforest")
 vim.o.hlsearch = true
 --vim.g.syntax = "on" -- unknown how to do this in lua, but is default on
