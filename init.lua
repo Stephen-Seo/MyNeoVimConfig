@@ -36,6 +36,7 @@ require("everforest").setup({
     transparent_background_level = 1,
 })
 vim.api.nvim_command("color everforest")
+vim.g.toggle_everforest_transparent_bg_on = 1
 vim.o.hlsearch = true
 --vim.g.syntax = "on" -- unknown how to do this in lua, but is default on
 vim.o.expandtab = true
@@ -112,3 +113,21 @@ vim.cmd('nmap <leader>f :lua vim.g.foldmethod_treesitter_fn()<CR>')
 
 -- <leader>l to load lsp
 vim.cmd('nmap <silent> <leader>l :call loadlsp#loadlspall()<CR> :e<CR> :echo "Loaded lsp plugins"<CR>')
+
+-- <leader>t to toggle bg transparency
+vim.g.toggle_everforest_transparent_bg = function ()
+  if vim.g.toggle_everforest_transparent_bg_on == 1 then
+    vim.g.toggle_everforest_transparent_bg_on = 0
+    require("everforest").setup({
+        transparent_background_level = 0,
+    })
+    vim.api.nvim_command("color everforest")
+  else
+    vim.g.toggle_everforest_transparent_bg_on = 1
+    require("everforest").setup({
+        transparent_background_level = 1,
+    })
+    vim.api.nvim_command("color everforest")
+  end
+end
+vim.cmd('nmap <leader>t :lua vim.g.toggle_everforest_transparent_bg()<CR>')
