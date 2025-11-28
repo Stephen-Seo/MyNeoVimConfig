@@ -148,7 +148,7 @@ vim.api.nvim_set_keymap("n", "<leader>rp", "<cmd>cp<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-N>", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-P>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", {noremap = true})
 -- Get diagnostic on currently selected
-vim.api.nvim_set_keymap("n", "<leader>F", "<cmd>lua vim.diagnostic.open_float()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>i", "<cmd>lua vim.diagnostic.open_float()<CR>", {noremap = true})
 
 EOF
 
