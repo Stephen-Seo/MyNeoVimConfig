@@ -97,18 +97,13 @@ lspconfig.clangd.setup {
     end
 }
 
-local rust_features = {}
-
-if string.find(vim.fn.getcwd(), "git/mpd_info_screen") then
-    table.insert(rust_features, "unicode_support")
-end
-
 lspconfig.rust_analyzer.setup {
     capabilities = capabilities,
     settings = {
         ["rust-analyzer"] = {
             ["cargo"] = {
-                ["features"] = rust_features,
+                -- Setting this to "all" should pass --all-features to Cargo.
+                ["features"] = "all",
             },
         },
     },
