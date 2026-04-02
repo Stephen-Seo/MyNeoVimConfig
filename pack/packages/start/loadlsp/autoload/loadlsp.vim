@@ -45,7 +45,6 @@ packloadall!
 "set completeopt=menu,menuone,noselect
 
 lua <<EOF
-local lspconfig = require'lspconfig'
 local cmp = require'cmp'
 cmp.setup({
     snippet = {
@@ -88,7 +87,7 @@ cmp.setup.cmdline(':', {
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-lspconfig.clangd.setup {
+vim.lsp.config['clangd'] = {
     cmd = {"clangd", "--completion-style=detailed"},
     capabilities = capabilities,
     on_attach = function (client, bufnr)
@@ -96,8 +95,9 @@ lspconfig.clangd.setup {
         client.server_capabilities.semanticTokensProvider = nil
     end
 }
+vim.lsp.enable('clangd')
 
-lspconfig.rust_analyzer.setup {
+vim.lsp.config['rust_analyzer'] = {
     capabilities = capabilities,
     settings = {
         ["rust-analyzer"] = {
@@ -112,20 +112,25 @@ lspconfig.rust_analyzer.setup {
         client.server_capabilities.semanticTokensProvider = nil
     end
 }
-lspconfig.gdscript.setup {
+vim.lsp.enable('rust_analyzer')
+
+vim.lsp.config['gdscript'] = {
     capabilities = capabilities,
     on_attach = function (client, bufnr)
         -- Use tree-sitter syntax highlighting, not lsp highlighting.
         client.server_capabilities.semanticTokensProvider = nil
     end
 }
-lspconfig.jedi_language_server.setup{
+vim.lsp.enable('gdscript')
+
+vim.lsp.config['jedi_language_server'] = {
     capabilities = capabilities,
     on_attach = function (client, bufnr)
         -- Use tree-sitter syntax highlighting, not lsp highlighting.
         client.server_capabilities.semanticTokensProvider = nil
     end
 }
+vim.lsp.enable('jedi_language_server')
 
 -- apply available fix
 vim.api.nvim_set_keymap("n", "<C-A>", "<cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true})
