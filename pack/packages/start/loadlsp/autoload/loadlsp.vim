@@ -90,10 +90,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 vim.lsp.config['clangd'] = {
     cmd = {"clangd", "--completion-style=detailed"},
     capabilities = capabilities,
-    on_attach = function (client, bufnr)
-        -- Use tree-sitter syntax highlighting, not lsp highlighting.
-        client.server_capabilities.semanticTokensProvider = nil
-    end
+--    on_attach = function (client, bufnr)
+--        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+--        client.server_capabilities.semanticTokensProvider = nil
+--    end
 }
 vim.lsp.enable('clangd')
 
@@ -107,28 +107,28 @@ vim.lsp.config['rust_analyzer'] = {
             },
         },
     },
-    on_attach = function (client, bufnr)
-        -- Use tree-sitter syntax highlighting, not lsp highlighting.
-        client.server_capabilities.semanticTokensProvider = nil
-    end
+--    on_attach = function (client, bufnr)
+--        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+--        client.server_capabilities.semanticTokensProvider = nil
+--    end
 }
 vim.lsp.enable('rust_analyzer')
 
 vim.lsp.config['gdscript'] = {
     capabilities = capabilities,
-    on_attach = function (client, bufnr)
-        -- Use tree-sitter syntax highlighting, not lsp highlighting.
-        client.server_capabilities.semanticTokensProvider = nil
-    end
+--    on_attach = function (client, bufnr)
+--        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+--        client.server_capabilities.semanticTokensProvider = nil
+--    end
 }
 vim.lsp.enable('gdscript')
 
 vim.lsp.config['jedi_language_server'] = {
     capabilities = capabilities,
-    on_attach = function (client, bufnr)
-        -- Use tree-sitter syntax highlighting, not lsp highlighting.
-        client.server_capabilities.semanticTokensProvider = nil
-    end
+--    on_attach = function (client, bufnr)
+--        -- Use tree-sitter syntax highlighting, not lsp highlighting.
+--        client.server_capabilities.semanticTokensProvider = nil
+--    end
 }
 vim.lsp.enable('jedi_language_server')
 

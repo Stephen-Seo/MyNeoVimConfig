@@ -17,7 +17,6 @@ use of this shortcut, you can disable it in the `init.lua` config file.
 
 1. `git pull` or `git fetch` and merge.
 2. `git submodule update --init --recursive`
-3. Open nvim and invoke `:TSUpdate` to update tree-sitter.
 
 ## Enabling LSP
 
