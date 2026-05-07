@@ -102,15 +102,15 @@ vim.g.quickcomment_whitespaceprefix = 1
 --    },
 --}
 
--- Setup folding based on treesitter
---vim.g.foldmethod_treesitter_fn = function ()
---    vim.wo.foldmethod = 'expr'
---    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
---end
+-- Setup folding based on lsp
+vim.g.foldmethod_lsp_fn = function ()
+    vim.o.foldmethod = 'expr'
+    vim.o.foldexpr = 'v:lua.vim.lsp.foldexpr()'
+end
 
 -- <leader>f to treesitter-fold
---vim.cmd('nmap <leader>f :lua vim.g.foldmethod_treesitter_fn()<CR>')
---vim.cmd('nmap <leader>F :set foldmethod=manual<CR>zE')
+vim.cmd('nmap <leader>f :lua vim.g.foldmethod_lsp_fn()<CR>')
+vim.cmd('nmap <leader>F :set foldmethod=manual<CR>zE')
 
 -- <leader>l to load lsp
 vim.cmd('nmap <silent> <leader>l :call loadlsp#loadlspall()<CR> :e<CR> :echo "Loaded lsp plugins"<CR>')
