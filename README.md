@@ -36,4 +36,4 @@ You can view currently registered normal-mode shortcuts with `:nmap`.
 
 If you want to improve/support/file-an-issue about this config, send it to:
 
-stephen AT seodisparate DOT com
+stephen AT mail DOT seodisparate DOT com
