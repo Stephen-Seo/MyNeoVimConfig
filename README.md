@@ -27,7 +27,8 @@ than one buffer open, you may have to reopen them (with :e) for lsp plugins to
 take effect.
 
 `loadlsp#loadlspall()` is a custom function that can be found
-[here](https://git.seodisparate.com/gitweb/?p=MyNeoVimConfig;a=blob;f=pack/packages/start/loadlsp/autoload/loadlsp.vim).
+[here](https://github.com/Stephen-Seo/MyNeoVimConfig/blob/main/pack/packages/start/loadlsp/autoload/loadlsp.vim)
+([locally hosted link here](https://git.seodisparate.com/gitweb/?p=MyNeoVimConfig;a=tree;f=pack/packages/start/loadlsp/autoload;hb=HEAD)).
 
 ## Other Notes
 
