@@ -81,8 +81,8 @@ nmap <silent> <leader>i :call CJKInput()<CR>
 ]])
 
 -- Disable q
-vim.cmd('nmap q :echo "I accidentally hit q, I don\'t use macros"<CR>')
-vim.cmd('vmap q <ESC>:echo "I accidentally hit q, I don\'t use macros"<CR>')
+vim.cmd('nmap q :echo "I accidentally hit q, macro recording is disabled"<CR>')
+vim.cmd('vmap q <ESC>:echo "I accidentally hit q, macro recording is disabled"<CR>')
 
 -- Set <leader>q to comment selected line(s)
 vim.cmd('nmap <leader>q :lua vim.g.quickcomment_togglecommentline()<CR>')
